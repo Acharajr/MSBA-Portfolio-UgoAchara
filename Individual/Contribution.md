@@ -47,7 +47,6 @@ One of the biggest takeaways was the importance of revisiting and refining model
 The backward approach reinforced that segmentation shouldn’t happen in isolation. When clusters are informed by the features that actually matter, the results are more interpretable and more useful for decision‑making.
 
 ---
-
 ## 🧾 **Summary**
 
 This project helped me grow both technically and analytically. I gained hands‑on experience building a complete machine learning pipeline, dealing with real‑world data challenges, and integrating supervised and unsupervised methods into a cohesive framework. More importantly, I learned how to advocate for approaches that combine technical depth with business relevance — a mindset I bring to every project I work on.
