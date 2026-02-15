@@ -74,14 +74,3 @@ Using all three models together created a comprehensive analytical framework:
 | **XGBoost** | Predict churn with high accuracy | Captures complex patterns |
 
 This combined approach enabled targeted, data‑driven retention strategies with measurable business impact.
-
----
-
-If you want, I can also format:
-
-- A shorter README version  
-- A slide‑ready version  
-- A technical appendix version  
-- A version with code blocks included  
-
-Just tell me the style you want next.
