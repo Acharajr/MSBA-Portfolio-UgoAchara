@@ -1,0 +1,61 @@
+CustomerID,City,Segment
+90,New York,Consumer
+91,Houston,Consumer
+92,Phoenix,Corporate
+93,New York,Consumer
+94,Phoenix,Corporate
+95,Houston,Corporate
+96,Los Angeles,Corporate
+97,Chicago,Consumer
+98,Chicago,Consumer
+99,New York,Consumer
+100,Houston,Corporate
+101,Los Angeles,Consumer
+102,Houston,Consumer
+103,Phoenix,Corporate
+104,Houston,Small Business
+105,Chicago,Consumer
+106,Los Angeles,Corporate
+107,Chicago,Consumer
+108,Los Angeles,Consumer
+109,Houston,Corporate
+110,Chicago,Consumer
+111,Houston,Corporate
+112,Houston,Consumer
+113,Chicago,Consumer
+114,New York,Small Business
+115,Phoenix,Consumer
+116,Phoenix,Consumer
+117,Chicago,Consumer
+118,Phoenix,Corporate
+119,Houston,Consumer
+120,Los Angeles,Consumer
+121,Houston,Small Business
+122,New York,Small Business
+123,Los Angeles,Consumer
+124,New York,Consumer
+125,Phoenix,Corporate
+126,Houston,Consumer
+127,Houston,Corporate
+128,Chicago,Corporate
+129,New York,Small Business
+130,New York,Consumer
+131,Houston,Corporate
+132,Los Angeles,Small Business
+133,Chicago,Consumer
+134,Phoenix,Corporate
+135,Chicago,Consumer
+136,Houston,Consumer
+137,Los Angeles,Consumer
+138,Los Angeles,Consumer
+139,Phoenix,Corporate
+140,Houston,Small Business
+141,Houston,Consumer
+142,Los Angeles,Corporate
+143,Los Angeles,Corporate
+144,Los Angeles,Corporate
+145,New York,Small Business
+146,New York,Consumer
+147,Phoenix,Corporate
+148,Phoenix,Consumer
+149,New York,Consumer

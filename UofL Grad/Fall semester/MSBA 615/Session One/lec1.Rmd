@@ -1,0 +1,248 @@
+---
+title: "R basics"
+output: html_document
+---
+
+# Introduction
+
+This document demonstrates how to embed R code and explanations within an R Markdown file. R Markdown allows you to mix text, code, and output in one document, making it ideal for data analysis and report generation.
+
+# **Arithmetic Operations**
+
+```{r, echo=TRUE, results='show'}
+
+# Assign the value 15 to variable x
+x <- 15  
+# Subtract 1 from x (the result will be displayed)
+x - 1 
+
+# Alternative Assignment Operator
+# Assign the value 15 to variable x using "=" instead of "<-" 
+x = 15  
+# Subtract 1 from x
+x - 1  
+
+# **Multiplication and Division Example**
+# Multiply x by 2 and divide by 5
+x * 2 / 5
+
+
+```
+# **Vectors**
+
+```{r, echo=TRUE, results='show'}
+# Creating a Numeric Vector
+# Here, we create a numeric vector with four elements
+x <- c(1, -1, 3.5, 2)  
+
+```
+
+# **Adding a Constant to Each Element**
+
+```{r, echo=TRUE, results='show'}
+# Add 1 to each element of the vector x
+x + 1  
+
+# **Calculating the Sum of Squared Differences from the Mean**
+# This is a common operation in statistics to measure variance
+sum((x - mean(x))^2)  
+```
+# **Creating Sequences**
+```{r, echo=TRUE, results='show'}
+# Create a sequence of integers from -3 to 5
+x <- -3:5  
+x
+
+# Generate a sequence from 2 to 6 with increments of 0.4
+x <- seq(from = 2, to = 6, by = 0.4) 
+x
+
+# Generate a sequence of specified length
+x <- seq(from = -1, to = 1, length = 6)  
+x
+
+# **Repeating Elements in a Vector**
+# Repeat each element of the vector (2 to 5) three times
+x <- rep(2:5, each = 3)  
+x
+```
+
+# **Handling Special Values**
+```{r, echo=TRUE, results='show'}
+# **Creating a Vector with Special Values**
+# Special values include Inf (infinity), -Inf (negative infinity), and NaN (not a number)
+v <- c(0, Inf, -Inf, NaN)  
+
+# **Checking for Finite Values**
+# This returns TRUE for finite values, FALSE otherwise
+is.finite(v)  
+
+# **Checking for NaN Values**
+# This returns TRUE for NaN values, FALSE otherwise
+is.nan(v)  
+
+# **Checking for NA Values**
+# This returns TRUE for NA (missing) values, FALSE otherwise
+is.na(v) 
+```
+# **Combining Vectors**
+
+```{r, echo=TRUE, results='show'}
+# **Creating Two Vectors**
+x <- 1:10  
+y <- 11:20  
+
+# **Combining as Rows**
+# This creates a 2-row matrix
+rbind(x, y)  
+
+# **Combining as Columns**
+# This creates a 2-column matrix
+cbind(x, y)  
+
+```
+# **Subsetting Vectors**
+
+```{r, echo=TRUE, results='show'}
+# **Creating a Vector**
+x <- c(5, 9, 2, 14, -4)  
+
+# **Accessing the Third Element**
+x[3]  
+
+# **Accessing Specific Elements Using Indices**
+# Here, we select the 2nd, 3rd, and 5th elements
+x[c(2, 3, 5)]  
+
+# **Accessing a Range of Elements**
+# This returns elements from the 3rd to the last element
+x[3:length(x)]  
+```
+
+```{r, echo=TRUE, results='show'}
+# **Coercion**
+# **Creating a Character Vector**
+x <- c("1", "b", "3")  
+
+# **Converting to Numeric**
+# Only numeric values will be converted; non-numeric will become NA
+as.numeric(x)  
+```
+# **Factors**
+```{r, echo=TRUE, results='show'}
+# **Creating a Factor for Colors**
+# Factors are useful for representing categorical data
+colors <- factor(c("Red", "Blue", "Green", "Red", "Blue"))  
+print(colors)
+
+# **Checking Factor Levels**
+# This returns the unique categories in the factor
+levels(colors)  
+
+# **Creating an Ordered Factor**
+# Here we define an order for levels, which is helpful for ordinal data
+satisfaction <- factor(c("Low", "Medium", "High", "Medium", "Low"),
+                       levels = c("Low", "Medium", "High"),
+                       ordered = TRUE)
+print(satisfaction)
+```
+
+# **Important Functions for Data Analysis**
+```{r, echo=TRUE, results='show'}
+# **Example Vector**
+x <- c(5, 2, 9, 1, 7)  
+
+# **Finding the Maximum Value**
+max(x)  
+
+# **Finding the Index of the Maximum Value**
+# which.max returns the position of the maximum element
+which.max(x)  
+
+# **Other Useful Functions**
+# **Identifying Indices of TRUE Values**
+x <- c(TRUE, FALSE, TRUE, FALSE)  
+which(x)  
+
+# **Finding Indices of Matching Elements in Another Vector**
+x <- c("a", "b", "c", "a")  
+y <- c("b", "c", "d")  
+match(x, y)  
+
+# **Using %in% to Check for Presence in Another Vector**
+# This returns TRUE for elements of x that are also in y
+x %in% y  
+```
+# **Basic Programming Tools**
+# **Conditionals**
+```{r, echo=TRUE, results='show'}
+a <- 0  
+if (a != 0) {
+    print(1/a)
+} else {
+    print("No reciprocal for 0.")
+}
+
+# **Vectorized Conditionals with ifelse**
+# ifelse allows us to apply conditions across all elements in a vector
+a <- c(0, 1, 2, -4, 5)  
+result <- ifelse(a > 0, 1/a, NA)
+result
+```
+
+
+# **Functions**
+```{r, echo=TRUE, results='show'}
+# **Defining a Custom Function to Calculate the Average**
+avg <- function(x) {
+    s <- sum(x)
+    n <- length(x)
+    s / n
+}
+
+# **Using the avg Function**
+x <- 1:100  
+avg(x)
+
+# **Comparing with the Built-in mean Function**
+# identical checks if two values are exactly the same
+identical(mean(x), avg(x))  
+```
+
+# **Loops**
+```{r, echo=TRUE, results='show'}
+# **Calculating Factorial Using a For Loop**
+factorial2 <- function(n) {
+    out <- 1
+    for (i in 1:n) {
+        out <- out * i
+    }
+    out
+}
+factorial2(10)
+
+# **Prime Checking Using a While Loop**
+isPrime <- function(n) {
+    i <- 2
+    if (n < 2) return(FALSE)
+    while (i <= sqrt(n)) {
+        if (n %% i == 0) return(FALSE)
+        i <- i + 1
+    }
+    return(TRUE)
+}
+isPrime(10)
+```
+# **Vectorization**
+```{r, echo=TRUE, results='show'}
+# **Loop Approach (Less Efficient)**
+system.time(for (i in 1:1e6) i^2)  
+
+# **Vectorized Approach (More Efficient)**
+system.time(seq_len(1e6)^2)  
+
+# **Apply Functions**
+# **Using sapply for Element-wise Application**
+x <- 1:10  
+sapply(x, sqrt)  
+```
