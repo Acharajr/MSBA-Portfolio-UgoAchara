@@ -1,0 +1,53 @@
+# 📘 **Project Reflection**
+
+As a master’s student, this case competition was one of the most technically challenging and rewarding projects I’ve worked on. I served as the primary technical contributor for my team, taking ownership of the full modeling pipeline and helping shape the analytical strategy behind our final solution.
+
+---
+
+## 🔍 **Analytical Strategy**
+
+A major part of my contribution was advocating for a **segmentation approach guided by supervised learning insights**. Instead of starting with clustering and hoping the segments made sense, I encouraged the team to take a **backward approach**:
+
+1. Use supervised models (Logistic Regression and XGBoost) to identify the most important churn‑driving features.  
+2. Use those features to guide a more meaningful K‑Means segmentation.
+
+This ensured that our clusters reflected real behavioral differences rather than arbitrary mathematical groupings. It also helped us create segments that were easier to interpret and more aligned with the actual drivers of churn.
+
+---
+
+## 🛠️ **Technical Execution**
+
+I led the coding and model development for the team, which included:
+
+- Cleaning and preparing the dataset  
+- Engineering features and encoding categorical variables  
+- Implementing K‑Means clustering with PCA visualization  
+- Building and tuning Logistic Regression and XGBoost models  
+- Addressing class imbalance within XGBoost  
+- Running iterative hyperparameter tuning cycles  
+- Evaluating models using AUC, accuracy, precision, and recall  
+- Translating model outputs into actionable insights for the team  
+
+This experience strengthened my ability to build end‑to‑end analytical workflows and communicate technical results clearly.
+
+---
+
+## 🎓 **Lessons Learned**
+
+### **1. Handling class imbalance requires multiple tuning strategies**  
+Working with an imbalanced churn dataset taught me that there is no single “fix.” I learned to combine several approaches — adjusting class weights, tuning model‑specific parameters, and using stratified splits — to build models that performed reliably across metrics.
+
+### **2. Evaluation must go beyond AUC**  
+At the start, our team leaned heavily on AUC. As we iterated, I realized that relying on one metric wasn’t enough, especially for churn. Incorporating **accuracy, precision, and recall** gave us a more complete understanding of model performance and helped us better manage the trade‑offs between false positives and false negatives.
+
+### **3. Iteration is essential to strong model development**  
+One of the biggest takeaways was the importance of revisiting and refining models repeatedly. Each tuning cycle revealed new insights — whether it was a feature interaction we hadn’t considered or a parameter that unexpectedly improved performance. This iterative mindset helped us build a stronger final model.
+
+### **4. Segmentation is most effective when grounded in real drivers**  
+The backward approach reinforced that segmentation shouldn’t happen in isolation. When clusters are informed by the features that actually matter, the results are more interpretable and more useful for decision‑making.
+
+---
+
+## 🧾 **Summary**
+
+This project helped me grow both technically and analytically. I gained hands‑on experience building a complete machine learning pipeline, dealing with real‑world data challenges, and integrating supervised and unsupervised methods into a cohesive framework. More importantly, I learned how to advocate for approaches that combine technical depth with business relevance — a mindset I bring to every project I work on.
